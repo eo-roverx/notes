@@ -2,3 +2,8 @@
 *.pdf
 incomplete
 exp*
+.obsidian/appearance.json
+.obsidian/workspace*
+.obsidian/themes
+.obsidian/*plugins*json
+.obsidian/hotkeys.json
