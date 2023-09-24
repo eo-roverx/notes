@@ -32,5 +32,7 @@ For each cell.
 *   PCM just provides overcharge, overdischarge, overcurrent protection. no balancing. this is typically built with just the two ICs (DW01A, BB3A), capacitors, and resistors.
 
 *   can use comparators to compare voltages of cell. use a known reference (like 4.09 V, 2.5 V etc) and adjust it using voltage dividers. then use it to compare for over-voltage, and similarly for under-voltage.
+*   can also use an IC like TL431 to provide an adjustable reference voltage. this is very stable.
+*   shunt resistors have an efficiency problem. they dissipate a lot of power, even at a low voltage (because we have high current).
 *   similar approach can be taken for overcurrent protection. use a shunt resistor, and use a comparator to compare the voltage drop across the resistor to a known reference. shut resistor should be parallel to battery and low resistance to not affect the circuit much.
-*   these outputs of the comparators can be used to control the mosfets. mosfets are used to disconnect the battery from the load.
+*   mosfets can be chained in series to form AND gates, with one input for each cell undervoltage protection, and one for the overcurrent protection. the output of this can go to a relay, which can disconnect the battery from the load.
