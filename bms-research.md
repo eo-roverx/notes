@@ -36,3 +36,7 @@ For each cell.
 *   shunt resistors have an efficiency problem. they dissipate a lot of power, even at a low voltage (because we have high current).
 *   similar approach can be taken for overcurrent protection. use a shunt resistor, and use a comparator to compare the voltage drop across the resistor to a known reference. shut resistor should be parallel to battery and low resistance to not affect the circuit much.
 *   mosfets can be chained in series to form AND gates, with one input for each cell undervoltage protection, and one for the overcurrent protection. the output of this can go to a relay, which can disconnect the battery from the load.
+
+Other BMS ICs:
+*   TI TP4056
+*   18650
